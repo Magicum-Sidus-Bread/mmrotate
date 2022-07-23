@@ -1,8 +1,8 @@
 import os
 import shutil
 
-path = 'G:/大创项目/test_process_data/train/'
-new_path = 'G:/大创项目/test_process_data/new_train/'
+path = '/home/dc/mnt/disk1/niuniu/Mydataset/trainData/video/'
+new_path = '/home/dc/mnt/disk1/niuniu/Mydataset/trainData/new_train/'
 count = os.listdir(path)
 count.sort(key = int)
 print(count)
@@ -12,6 +12,7 @@ num = 0
 
 for dir in count:
     files = os.listdir(path+dir+'/img/')
+    files.sort(key=lambda x: int(x.split('.')[0]))
     #print(files)
     for file in files:
         if file.find('.jpg') != -1:

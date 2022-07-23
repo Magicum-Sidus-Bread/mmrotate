@@ -1,10 +1,10 @@
 import os
 
-gtpath = 'G:/大创项目/test_process_data/gt/'
-gtpath_new = 'G:/大创项目/test_process_data/new_gt/'
+gtpath = '/home/dc/mnt/disk1/niuniu/Mydataset/trainData/gt/'
+gtpath_new = '/home/dc/mnt/disk1/niuniu/Mydataset/trainData/new_gt/'
 
 filenames = os.listdir(gtpath)
-# filenames.sort(key=lambda x:int(x[:-4]))
+filenames.sort(key = lambda x:int(x.split('.')[0]))
 print(filenames)
 offset = 0
 Maxframe = 0
